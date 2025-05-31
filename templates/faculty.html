@@ -1,0 +1,156 @@
+{% load static %}
+{% include 'navbar.html' %}
+
+<!-- Main Container -->
+<div class="container py-5 text-white">
+
+    <!-- Faculty Section -->
+    <div class="text-center mb-5">
+        <h2 class="text-warning fw-bold display-5"><i class="bi bi-people-fill me-2"></i>Our Faculty</h2>
+        <p>
+            Our experienced faculty members bring subject expertise, real-world experience, and innovative teaching strategies to the classroom—ensuring every learner thrives.
+        </p>
+    </div>
+
+    <div class="row g-4">
+        <!-- Faculty Member 1 -->
+        <div class="col-md-4">
+            <div class="card bg-secondary text-white border-0 shadow-lg h-100 hover-zoom">
+                <div class="card-body text-center">
+                    <img src="{% static 'images/jos.jpg' %}" class="rounded-circle border border-4 border mb-3" width="180" height="180" alt="Faculty 1">
+                    <h5 class="fw-bold">Mr. Joseph James</h5>
+                    <p class="mb-1">MSC Computer Science
+                        <br>React Developer
+                    </p>
+                    <p><em>Specialized in PHP & Laravel</em></p>
+                </div>
+            </div>
+        </div>                  
+        <!-- Faculty Member 2 -->
+        <div class="col-md-4">
+            <div class="card bg-secondary text-white border-0 shadow-lg h-100 hover-zoom">
+                <div class="card-body text-center">
+                    <img src="{% static 'images/vin3.png' %}" class="rounded-circle border border-4 border mb-3" width="180" height="180" alt="Faculty 2">
+                    <h5 class="fw-bold">Mr. Vineesh Vijayan</h5>
+                    <p class="mb-1">Cybersecurity</p>
+                    <p><em>Networking & Ethical Hacking </em></p>
+                </div>
+            </div>
+        </div>
+        <!-- Faculty Member 3 -->
+        <div class="col-md-4">
+           <div class="card bg-secondary text-white border-0 shadow-lg h-100 hover-zoom">
+                <div class="card-body text-center">
+                    <img src="{% static 'images/jib.jpg' %}" class="rounded-circle border border-4 mb-3" width="180" height="180" alt="Faculty 3">
+                    <h5 class="fw-bold">Ms. Jibiya Jacob</h5>
+                    <p class="mb-1">Master in Computer Application</p>
+                    <p><em>Full Stack Web Development</em></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div></div>
+    <br><br>
+<!-- Faculty Member 4 (Centered) -->
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <div class="card bg-secondary text-white border-0 shadow-lg h-100 hover-zoom">
+            <div class="card-body text-center">
+                <img src="{% static 'images/ab.jpg' %}" class="rounded-circle border border-4  mb-3" width="180" height="180" alt="Faculty 4">
+                <h5 class="fw-bold">Abhilash Anand</h5>
+                <p class="mb-1">BSC Computer Science</p>
+                <p><em>CPT, DCNE</em><br>
+                NOC L2 Engineer</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Developers Section -->
+    <div class="text-center my-5 pt-5">
+        <h2 class="text-info fw-bold display-5"><i class="bi bi-code-slash me-2"></i>Our Developers</h2>
+        <p>
+            Meet the passionate developers behind LearnAura who design, code, and maintain our platform to ensure the best learning experience.
+        </p>
+    </div>
+
+    <div class="row g-4">
+        <!-- Developer 1 -->
+        <div class="col-md-4">
+            <div class="card bg-secondary text-white border-0 shadow-lg h-100 hover-zoom">
+                <div class="card-body text-center">
+                    <img src="{% static 'images/jib.jpg' %}" class="rounded-circle border border-4  mb-3" width="180" height="180" alt="Developer 1">
+                    <h5 class="fw-bold">Jibiya Jacob</h5>
+                    <p class="mb-1">Backend Developer</p>
+                    <p><em>Python, Django, SQL</em></p>
+                </div>
+            </div>
+        </div>
+        <!-- Developer 2 -->
+        <div class="col-md-4">
+            <div class="card bg-secondary text-white border-0 shadow-lg h-100 hover-zoom">
+                <div class="card-body text-center">
+                    <img src="{% static 'images/jos.jpg' %}" class="rounded-circle border border-4  mb-3" width="180" height="180" alt="Developer 2">
+                    <h5 class="fw-bold">Joseph James</h5>
+                    <p class="mb-1">Frontend Developer</p>
+                    <p><em>Bootstrap, JavaScript, React, HTML, CSS</em></p>
+                </div>
+            </div>
+        </div>
+        <!-- Developer 3 -->
+        <div class="col-md-4">
+            <div class="card bg-secondary text-white border-0 shadow-lg h-100 hover-zoom">
+                <div class="card-body text-center">
+                    <img src="{% static 'images/vi.jpg' %}" class="rounded-circle border border-4  mb-3" width="180" height="180" alt="Developer 3">
+                    <h5 class="fw-bold">Vineetha</h5>
+                    <p class="mb-1">MSC Computer Science</p>
+                    <p><em>Asp.net and Flutter Developer</em></p>
+                </div>
+            </div>
+        </div> 
+
+
+        
+</div>
+
+<!-- Custom Styling -->
+<style>
+    body {
+        background: linear-gradient(135deg,#95ceda, #8db5c4);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       
+    }
+
+    .hover-zoom:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+.card-body{
+    background-color: #080808;
+}
+    .card-body p {
+        color: #f8f8f8;
+        font-size: 0.95rem;
+    }
+
+    .card-body h5 {
+        color: #ffffff;
+    }
+
+    .text-info {
+        color: #000000 !important;
+    }
+
+    .text-warning {
+        color: #000000 !important;
+    }
+
+    .section-title h2 {
+        font-weight: 700;
+    }
+    p{
+        color: #070707;
+    }
+</style>

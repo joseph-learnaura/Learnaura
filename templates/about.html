@@ -1,0 +1,94 @@
+{% include 'navbar.html' %}
+{% load static %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<style>
+    body {
+       background: radial-gradient(circle at top right, #89d8f5 500px, #f7f7f7 200px);
+        color: #ffffff;
+    }
+    .highlight {
+        color: #ffcc00;
+    }
+    h2, h4 {
+        font-family: 'Segoe UI', sans-serif;
+    }
+    .lead {
+        font-size: 1.2rem;
+    }
+    .section-box {
+        background-color: #1e1e1e;
+        border-radius: 12px;  
+        padding: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .section-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 20px rgba(125, 194, 211, 0.2);
+    }
+    ul li {
+        margin-bottom: 10px;
+    }
+    h5,p1{
+        color:#000000;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold text-warning">About <span class="highlight">LearnAura</span></h2>
+        <img src="{% static 'images/log.png' %}" alt="LearnAura Promo" class="hero-img" data-bs-toggle="modal" data-bs-target="#imageModal" height="50" width="80" style="cursor: pointer;">
+       <br>
+        <p1 class="lead">Your gateway to mastering computer science through practical learning.</p1><br>
+        <p1>Empowering Computer Science Education with Application-Oriented Learning</p1>
+    </div>
+
+    <div class="mb-5 text-light">
+        <h5 >
+            At <strong>LearnAura</strong>, we are dedicated to delivering high-quality, application-oriented education in computer science.
+            Our mission is to help students strengthen their foundations, develop practical skills, and gain hands-on experience in industry-relevant technologies.
+        </h5>
+    </div>
+
+    <div class="row gy-4">
+        <div class="col-md-6">
+            <div class="section-box">
+                <h4 class="text-info"><i class="bi bi-laptop-fill me-2"></i>1. Online Tuition Classes</h4>
+                <p>We offer personalized online tuition for students from 5th grade to post-graduation. Our structured learning focuses on concept clarity, real-world application, and individual attention.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="section-box">
+                <h4 class="text-info"><i class="bi bi-tools me-2"></i>2. Project Centre</h4>
+                <p>Our project guidance services support students with mini and major academic projects. We emphasize innovation, problem-solving, and practical implementation strategies to enhance learning.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="section-box">
+                <h4 class="text-info"><i class="bi bi-briefcase-fill me-2"></i>3. Internship Programs</h4>
+                <p>Get industry exposure with internships in teaching, web development, and live projects. These experiences provide practical skills and improve confidence through real-world applications.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="section-box">
+                <h4 class="text-info"><i class="bi bi-wifi me-2"></i>4. Workshops (Upcoming)</h4>
+                <p>We host workshops on trending topics like networking and cybersecurity. Stay ahead with insights into best practices, tools, and current digital trends.</p>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="section-box">
+                <h4 class="text-info"><i class="bi bi-code-slash me-2"></i>5. Programming Languages & Frameworks</h4>
+                <p>Master essential languages and frameworks through our guided courses:</p>
+                <ul class="list-unstyled ms-3">
+                    <li>✅ <strong>Core Languages:</strong> C, C++, Python, Java, PHP</li>
+                    <li>✅ <strong>Frameworks:</strong> Django, Laravel, React (Basics)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+</div>

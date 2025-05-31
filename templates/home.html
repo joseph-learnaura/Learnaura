@@ -1,0 +1,255 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LearnAura | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+    background: radial-gradient(circle at top right, #89d8f5 500px, #f7f7f7 200px);
+    font-family: 'Segoe UI', sans-serif;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+        h1, h2, h4 ,ul{
+            color: #000000;
+            
+        }
+        .highlight {
+            color: #0dcaf0;
+        }
+        .lead {
+            color: #dddddd;
+            font-size: 1.2rem;
+        }
+        .btn-warning {
+            font-weight: bold;
+            box-shadow: 0 0 20px #ffc107b0;
+            border-radius: 50px;
+            padding: 10px 30px;
+        }
+        a.btn-warning:hover {
+            background-color: #e6b800;
+            color: #000;
+        }
+        .hero-img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+        }
+        .section-title {
+             background: radial-gradient(circle at top right, #89d8f5 500px, #f7f7f7 200px);
+            margin-top: 50px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ffc107;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        ul.custom-list li {
+            padding: 8px 0;
+            font-size: 1.1rem;
+        }
+        ul.custom-list li::before {
+            content: "✔️ ";
+            color: #0dcaf0;
+        }
+        .contact-info {
+            margin-top: 60px;
+            padding: 30px;
+            background-color: #2c2c2c;
+            border-radius: 15px;
+        }
+        .footer {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 60px;
+            border-top: 1px solid #444;
+        }
+        .footer a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .course-card {
+            background: #2c2c2c;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+        }
+        .course-title {
+            font-size: 1.4rem;
+            color: #ffc107;
+            font-weight: bold;
+        }
+        .course-description {
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+        .course-icon {
+            font-size: 3rem;
+            color: #ffc107;
+        }
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+        }
+       p,a,ul{
+            color: #000000;
+        }
+        h6{
+            color: #f0f7f8;
+        }
+        contact-info{
+            background-color: #2c2c2c;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            align-items: center;
+            text-align: center !important;
+        }
+    </style>
+</head>
+<body>
+
+{% include 'navbar.html' %}
+
+<!-- Hero Section -->
+<div class="container my-5">
+    <div class="d-flex justify-content-between align-items-center hero-section flex-wrap">
+        <div class="col-md-7">
+             <img src="{% static 'images/log.png' %}" alt="LearnAura Promo" class="hero-img" data-bs-toggle="modal" data-bs-target="#imageModal" height="50" width="80" style="cursor: pointer;">
+            <h1 class="fw-bold">Learn<span class="highlight">Aura</span></h1>
+            <h2 class="mb-3">Empowering Education Through Technology</h2>  
+            <p>
+                At LearnAura, we believe education goes beyond memorization—it’s about understanding, applying, and innovating. We aim to create thinkers, creators, and innovators who master concepts and solve real-world problems.
+            </p>
+            <a href="#" class="btn btn-warning btn-lg mt-3">Enroll Now</a>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="{% static 'images/learn.jpg' %}" alt="LearnAura Promo" class="hero-img mt-4" data-bs-toggle="modal" data-bs-target="#imageModal">
+        </div>
+    </div>
+
+    <!-- Offerings -->
+    <div class="section-title mt-5"><h2><i class="bi bi-lightbulb"></i> Our Offerings</h2></div>
+    <ul>
+        <li><strong>Online Tuition Classes:</strong> Concept-based tuition from 5th grade to PG level</li>
+        <li><strong>Project Centre:</strong> Support for UG/PG mini & major projects</li>
+        <li>Internship Programs:</strong> Hands-on teaching & web development experience</li>
+        <li><strong>Workshops:</strong> Cybersecurity & networking workshops (upcoming)</li>
+        <li><strong>Programming Courses:</strong> C, C++, Python, Java, PHP, Django, Laravel, React (Basics)</li>
+    </ul>
++
+
+    <!-- Programming Courses Section -->
+    <div class="section-title mt-5"><h2><i class="bi bi-code-slash"></i> Programming Courses</h2></div>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="course-card text-center">
+                <i class="bi bi-file-earmark-code course-icon"></i>
+                <h3 class="course-title">C Programming</h3>
+                <p class="course-description">Learn the fundamentals of C programming, a critical language for system-level development, algorithms, and more.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="course-card text-center">
+                <i class="bi bi-file-earmark-code course-icon"></i>
+                <h3 class="course-title">C++ Programming</h3>
+                <p class="course-description">Master object-oriented programming and data structures using C++, a widely used language for applications, games, and more.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="course-card text-center">
+                <i class="bi bi-file-earmark-code course-icon"></i>
+                <h3 class="course-title">Python Programming</h3>
+                <p class="course-description">Learn Python for everything from data analysis to web development, automation, and artificial intelligence.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row g-4 mt-4">
+        <div class="col-md-4">
+            <div class="course-card text-center">
+                <i class="bi bi-file-earmark-code course-icon"></i>
+                <h3 class="course-title">Java Programming</h3>
+                <p class="course-description">Explore Java programming and its application in Android development, backend development, and enterprise solutions.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="course-card text-center">
+                <i class="bi bi-file-earmark-code course-icon"></i>
+                <h3 class="course-title">PHP & Laravel</h3>
+                <p class="course-description">Learn PHP for dynamic web development and Laravel for building robust and scalable web applications.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="course-card text-center">
+                <i class="bi bi-file-earmark-code course-icon"></i>
+                <h3 class="course-title">React.js Basics</h3>
+                <p class="course-description">Learn how to build interactive user interfaces using React.js, one of the most popular JavaScript libraries.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Features -->
+    <div class="section-title mt-5"><h2><i class="bi bi-check-circle-fill"></i style=""> Why Choose LearnAura?</h2></div>
+    <ul >
+        <li>Individual and Group Classes</li>
+        <li>Morning & Evening Batches</li>
+        <li>Online Live Tuition for <strong>Computer Science</strong> (5th to 12th, UG & PG)</li>
+        <li>State, ICSE, CBSE syllabus coverage</li>
+    </ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+
+    <!-- Contact -->
+    <div class="contact-info"  style="background: radial-gradient(circle at top right, #89d8f5 500px, #f7f7f7 200px)";>
+        <h4><i class="bi bi-telephone-forward-fill text-warning me-2"></i>For More Details:</h4>
+        <p><i class="bi bi-telephone-fill text-info me-2"></i> +91 96058 65463</p>
+        <p><i class="bi bi-telephone-fill text-info me-2"></i> +91 62386 01146</p>
+    </div>
+</div>
+
+<!-- Modal for Image -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="imageModalLabel">LearnAura Promo</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="{% static 'images/learn.jpg' %}" alt="LearnAura Full Image" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <h6><strong>LearnAura</strong> &copy; 2025. Empowering Education Through Technology.</p>
+       
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a> | 
+            <a href="mailto:support@learnaura.com"><i class="bi bi-envelope-fill"></i> Contact Us</a>
+        </h6>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

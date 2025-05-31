@@ -1,0 +1,51 @@
+{% include 'navbar.html' %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<style>
+    body {
+        background: linear-gradient(135deg,#95ceda, #8db5c4);
+        color: #ffffff;
+    }
+    .highlight {
+        color: #ffcc00;
+    }
+    .contact-card {
+        background-color: #1e1e1e;
+        border: 1px solid #2a2a2a;
+        border-radius: 12px;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(255, 204, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .contact-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 24px rgba(255, 204, 0, 0.2);
+    }
+    .contact-icon {
+        font-size: 1.5rem;
+        color: #ffcc00;
+        margin-right: 10px;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold text-warning">Contact <span class="highlight">Us</span></h2>
+        <p class="lead text-light">We're here to help! Reach out to us anytime.</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="contact-card">
+                <p><i class="bi bi-envelope-fill contact-icon"></i><strong>Email:</strong> support@learnaura.com</p> 
+                <p><i class="bi bi-telephone-fill contact-icon"></i><strong>Phone:</strong> +91-9876543210</p>
+                <p><i class="bi bi-geo-alt-fill  -icon"></i><strong>Address:</strong> Kochi, Kerala, India</p>
+                <p><i class="bi bi-clock-fill contact-icon"></i><strong>Working Hours:</strong> Mon – Sat, 9:00 AM – 6:00 PM</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-5 text-center">
+        <p class="lead">Want to discuss a course or have a query? <a href="mailto:support@learnaura.com" class="text-warning">Email us now</a>.</p>
+    </div>
+</div>                                                                                                 
