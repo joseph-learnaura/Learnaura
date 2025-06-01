@@ -27,9 +27,19 @@ SECRET_KEY = 'django-insecure-8xl5nd5o89%%d=4iopw9#5cw&-8dwc$zj*o5(miy+w(-a8=6lh
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["https://learnaura.onrender.com",
+                 "l-earnaura.firebaseapp.com",
+                 "learnauraedutech.com"
+                 "l-earnaura.web.app",]
 
 
+import os
+
+# STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 
@@ -42,7 +52,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-     'main',
+    'main',
+    'corsheaders',
+
 ]
 
 MIDDLEWARE = [
@@ -53,6 +65,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://l-earnaura.web.app",
+    "https://l-earnaura.firebaseapp.com",
+    "https://learnauraedutech.com",
 ]
 
 ROOT_URLCONF = 'learnaura.urls'
