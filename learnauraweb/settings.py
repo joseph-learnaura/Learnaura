@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-8xl5nd5o89%%d=4iopw9#5cw&-8dwc$zj*o5(miy+w(-a8=6lh
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
-ALLOWED_HOSTS = ["https://learnaura.onrender.com",
+ALLOWED_HOSTS = ["learnaura.onrender.com",
                  "l-earnaura.firebaseapp.com",
                  "learnauraedutech.com",
                  "l-earnaura.web.app",]
