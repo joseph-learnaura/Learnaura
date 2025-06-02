@@ -5,20 +5,53 @@
     <meta charset="UTF-8">
     <title>LearnAura | Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body {
+        
+    body {
     background: radial-gradient(circle at top right, #89d8f5 500px, #f7f7f7 200px);
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Inter', 'Poppins', 'Segoe UI', Arial, sans-serif;
     color: #000000;
     margin: 0;
     padding: 0;
+    position: relative;
+    overflow-x: hidden;
 }
 
-        h1, h2, h4 ,ul{
-            color: #000000;
-            
-        }
+.bubble-effect {
+    position: fixed;
+    top: 50%;
+    left: 0%;
+    width: 800px;
+    height: 400px;
+    background: radial-gradient(circle at top left, #89d8f5cc 0%, #89d8f500 70%);
+    border-radius: 50%;
+    transform: translate(50%, 50%);
+    z-index: 0;
+    pointer-events: none;
+    filter: blur(2px);
+}
+.bubble-2 {
+    top: 20%;
+    left: 200%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, #0dcaf0bb 0%, #89d8f500 70%);
+}
+.bubble-3 {
+    top: 80%;
+    left: 800%;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, #42c5e699 1%, #89d8f500 70%);
+}
+
+        h1, h2, h3, h4, h5, h6, .section-title {
+    font-family: 'Poppins', 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-weight: bolder;
+}
         .highlight {
             color: #0dcaf0;
         }
@@ -37,24 +70,35 @@
             color: #000;
         }
         .hero-img {
-            max-width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+            max-width: 500px;
+            height: 800;
+            padding: 12px;
+            margin-top: 10px;
+            z-index: 2;
+            position: relative;
         }
-        .section-title {
-             background: radial-gradient(circle at top right, #89d8f5 500px, #f7f7f7 200px);
-            margin-top: 50px;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #ffc107;
-            padding-bottom: 10px;
-            display: inline-block;
-        }
+      .section-title {
+   background: radial-gradient(circle at center, #0d73e7 300px, #7ed2d8 800px);
+    color: white;
+
+    padding: 15px 25px;
+    border-radius: 30px; /* curved edges */
+    text-align: center;
+    margin-bottom: 40px;
+    border: 2px solid #0aa2c0; /* darker cyan border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* soft shadow */
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
         ul.custom-list li {
             padding: 8px 0;
             font-size: 1.1rem;
         }
         ul.custom-list li::before {
-            content: "✔️ ";
+            content: "✔ ";
             color: #0dcaf0;
         }
         .contact-info {
@@ -64,7 +108,7 @@
             border-radius: 15px;
         }
         .footer {
-            background-color: #000000;
+            background-color: #2697b9;
             color: #ffffff;
             padding: 30px 0;
             text-align: center;
@@ -79,28 +123,30 @@
             text-decoration: underline;
         }
         .course-card {
-            background: #2c2c2c;
+            background: #ffffff;
             border-radius: 15px;
+            border: 2px solid #02265cbb; /* Add this line */
             padding: 20px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            color: #000;
+            box-shadow: 0 0 15px rgba(40, 110, 240, 0.1);
             transition: all 0.3s ease;
         }
         .course-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 25px rgba(20, 93, 228, 0.2);
         }
         .course-title {
             font-size: 1.4rem;
-            color: #ffc107;
+            color: #024ace;
             font-weight: bold;
         }
         .course-description {
             font-size: 1.1rem;
-            color: #ddd;
+            color: #000000;
         }
         .course-icon {
             font-size: 3rem;
-            color: #ffc107;
+            color: #05437e;
         }
         @media (max-width: 768px) {
             .hero-section {
@@ -115,36 +161,99 @@
         h6{
             color: #f0f7f8;
         }
-        contact-info{
-            background-color: #2c2c2c;
+        .contact-info{
+            background-color: #e8eef0;
+            color: #024ace;
             padding: 20px;
+             border: 2px solid #02265cbb; /* Add this line */
             border-radius: 10px;
             margin-top: 30px;
             align-items: center;
             text-align: center !important;
         }
+    .carousel-img {
+    height: 850px;
+    width: 500px;
+    object-fit: cover;
+    border-radius: 20px;    
+    
+}
+@media (max-width: 500px) {
+    .carousel-img {
+        height: 800px;
+    }
+}
+.btn-demo-blue {
+    background-color: #0d6efd;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 12px 40px;
+    box-shadow: 0 4px 18px #0d6efd44;
+    transition: background 0.2s;
+}
+.btn-demo-blue:hover {
+    background-color: #024ace;
+    color: #fff;
+}
     </style>
 </head>
 <body>
-
+<div class="bubble-effect"></div>
+<div class="bubble-effect bubble-2"></div>
+<div class="bubble-effect bubble-3"></div>
 {% include 'navbar.html' %}
 
 <!-- Hero Section -->
 <div class="container my-5">
     <div class="d-flex justify-content-between align-items-center hero-section flex-wrap">
         <div class="col-md-7">
-<img src="https://learnaura.onrender.com/static/images/learn.jpg" alt="LearnAura Image">  
-          <h1 class="fw-bold">Learn<span class="highlight">Aura</span></h1>
-            <h2 class="mb-3">Empowering Education Through Technology</h2> 
+            
+            <h1 class="fw-bold">Learn<span class="highlight">Aura</span></h1>
+            <h2 class="mb-3">Empowering Education Through Technology</h2>  
             <p>
                 At LearnAura, we believe education goes beyond memorization—it’s about understanding, applying, and innovating. We aim to create thinkers, creators, and innovators who master concepts and solve real-world problems.
             </p>
             <a href="#" class="btn btn-warning btn-lg mt-3">Enroll Now</a>
         </div>
-        <div class="col-md-4 text-center">
-<img src="https://learnaura.onrender.com/static/images/learn.jpg" alt="LearnAura Image">        </div>
+        <div class="col-md-4 text-center position-relative d-flex flex-column align-items-center">
+    <!-- Sticker-style logo, slightly overlapping the team images -->
+    <img src="https://learnaura.onrender.com/static/images/man.png" 
+         alt="LearnAura Image" 
+         class="hero-img mb-3">
+         <>
+    <!-- Team images in a row, slightly behind the logo -->
+    
+</div>
     </div>
+<!-- Bootstrap Carousel for Running Posters -->
+<div id="posterCarousel" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="500">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/sc.jpg' %}" class="d-block w-100 rounded-4 carousel-img" alt="Poster 1">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/2.jpg' %}" class="d-block w-100 rounded-4 carousel-img" alt="Poster 2">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/3.jpg' %}" class="d-block w-100 rounded-4 carousel-img" alt="Poster 3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#posterCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#posterCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
 
+<!-- Book a Free Demo Class Button -->
+<div class="text-center mb-4">
+  <a href="https://wa.me/919605865463?text=I%20want%20to%20book%20a%20free%20demo%20class%20with%20LearnAura" target="_blank" class="btn-demo-blue btn-lg px-5 rounded-pill fw-bold shadow">
+    BOOK A FREE DEMO CLASS
+  </a>
+</div>
     <!-- Offerings -->
     <div class="section-title mt-5"><h2><i class="bi bi-lightbulb"></i> Our Offerings</h2></div>
     <ul>
@@ -154,7 +263,7 @@
         <li><strong>Workshops:</strong> Cybersecurity & networking workshops (upcoming)</li>
         <li><strong>Programming Courses:</strong> C, C++, Python, Java, PHP, Django, Laravel, React (Basics)</li>
     </ul>
-+
+
 
     <!-- Programming Courses Section -->
     <div class="section-title mt-5"><h2><i class="bi bi-code-slash"></i> Programming Courses</h2></div>
@@ -215,12 +324,14 @@
     </ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 
     <!-- Contact -->
-    <div class="contact-info"  style="background: radial-gradient(circle at top right, #89d8f5 500px, #f7f7f7 200px)";>
-        <h4><i class="bi bi-telephone-forward-fill text-warning me-2"></i>For More Details:</h4>
+    <div class="contact-info">
+        <h4><i class="bi bi-telephone-forward-fill text-info me-2"></i>For More Details:</h4>
         <p><i class="bi bi-telephone-fill text-info me-2"></i> +91 96058 65463</p>
         <p><i class="bi bi-telephone-fill text-info me-2"></i> +91 62386 01146</p>
     </div>
 </div>
+
+
 
 <!-- Modal for Image -->
 <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
@@ -231,7 +342,7 @@
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center">
-                <img src="https://learnaura.onrender.com/static/images/learn.jpg" alt="LearnAura Image">
+                <img src="{% static 'images/learn.jpg' %}" alt="LearnAura Full Image" class="img-fluid rounded shadow">
             </div>
         </div>
     </div>
