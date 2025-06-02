@@ -1,1 +1,1 @@
-web: gunicorn LearnAura.wsgi
+web: gunicorn learnauraweb.wsgi

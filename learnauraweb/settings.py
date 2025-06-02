@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-8xl5nd5o89%%d=4iopw9#5cw&-8dwc$zj*o5(miy+w(-a8=6lh
 DEBUG = config('DEBUG', default=False, cast=bool)
 ALLOWED_HOSTS = ["https://learnaura.onrender.com",
                  "l-earnaura.firebaseapp.com",
-                 "learnauraedutech.com"
+                 "learnauraedutech.com",
                  "l-earnaura.web.app",]
 
 
@@ -76,7 +76,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://learnauraedutech.com",
 ]
 
-ROOT_URLCONF = 'learnaura.urls'
+ROOT_URLCONF = 'learnauraweb.urls'
 
 TEMPLATES = [
     {
@@ -93,7 +93,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'learnaura.wsgi.application'
+WSGI_APPLICATION = 'learnauraweb.wsgi.application'
 
 
 # Database
