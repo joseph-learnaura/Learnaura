@@ -7,4 +7,4 @@ def test_view(request):
     return JsonResponse({"message": "Backend is working!"})
 
 def courses(request):
-    return render(request, 'courses.html')  # ✅ Ensure `courses.html` exists
+    return render(request, 'main/courses.html')  # ✅ Ensure `courses.html` exists
