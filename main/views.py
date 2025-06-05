@@ -1,6 +1,7 @@
 from django.urls import reverse
 from django.shortcuts import redirect
 
+
 # Create your views here.
 from django.http import JsonResponse
 

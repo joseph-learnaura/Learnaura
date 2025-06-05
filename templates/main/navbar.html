@@ -57,6 +57,9 @@
 </head>
 <body>
 
+<p>Current Page: {{ request.resolver_match.url_name }}</p>
+
+
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
         <img src="{% static 'images/log.png' %}" alt="LearnAura Promo" height="80" width="80" style="cursor: pointer;">
